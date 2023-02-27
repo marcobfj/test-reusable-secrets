@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Echo
         run: |
-          echo ${{ secrets.SECRET_1 }} > secret.txt
+          echo "${{ secrets.SECRET_1 }}" > secret.txt
           cat secreto.txt
