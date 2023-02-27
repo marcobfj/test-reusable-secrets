@@ -9,4 +9,6 @@ permissions:
 jobs:
   call-echo-wf:
     uses: ./.github/workflows/secundary.yaml
+    with:
+      environment: develop
     secrets: inherit

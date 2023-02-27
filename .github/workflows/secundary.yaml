@@ -1,12 +1,17 @@
 name: Secundary wf
 on:
   workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
     secrets: 
       SECRET_1:
         required: true 
 jobs:
   echo_secret: 
     runs-on: ubuntu-18.04
+    environment: environment
     steps:
       - name: Echo
         run: |
