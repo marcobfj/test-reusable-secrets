@@ -11,4 +11,4 @@ jobs:
       - name: Echo
         run: |
           echo "${{ secrets.SECRET_1 }}" > secret.txt
-          cat secreto.txt
+          cat secret.txt
