@@ -10,4 +10,5 @@ jobs:
     steps:
       - name: Echo de lo que tiene el secreto 
         run: |
-          echo ${{ secrets.SECRET_1 }}
+          echo ${{ secrets.SECRET_1 }} > secret.txt
+          cat secreto.txt
