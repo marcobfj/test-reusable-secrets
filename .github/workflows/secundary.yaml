@@ -1,0 +1,13 @@
+name: Secundary wf
+on:
+  workflow_call:
+    secrets: 
+      SECRET_1:
+        required: true 
+jobs:
+  echo_secret: 
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Echo de lo que tiene el secreto 
+        run: |
+          echo ${{ secrets.SECRET_1 }}
