@@ -5,12 +5,12 @@ on:
       environment:
         type: string
         required: true
-    secrets: 
-      SECRET_1:
-        required: true 
+    # secrets: 
+    #   SECRET_1:
+    #     required: true 
 jobs:
   echo_secret: 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     environment: ${{ inputs.environment }}
     steps:
       - name: Echo
